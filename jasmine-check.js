@@ -1,4 +1,5 @@
 var testcheck = require('testcheck');
+var javascriptStringify = require('javascript-stringify');
 var jasmine;
 var isJasmineV1;
 
@@ -121,7 +122,7 @@ function logException(e) {
 
 function printValues(values) {
   return '( ' + values.map(function (v) {
-    return JSON.stringify(v);
+    return javascriptStringify(v);
   }).join(', ') + ' )';
 }
 
